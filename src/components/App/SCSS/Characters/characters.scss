@@ -1,0 +1,93 @@
+@import '../Variables/variables.scss';
+@import '../Mixins/mixins.scss';
+
+.characters {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 1200px;
+        width: 80%;
+        height: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        padding: 25px;
+        overflow: auto;
+        border: 1px solid $text-color;
+        box-shadow: $box-shadow-light;
+        background-size: cover;
+    }
+
+    &__item {
+        background-color: $color-dark;
+        width: 250px;
+        height: 330px;
+        margin: 12px;
+        box-shadow: $box-shadow-dark;
+    }
+
+    &__text {
+        justify-content: space-between;
+        width: 210px;
+        margin: auto;
+        text-align: center;
+        color: $light-color;
+        display: flex;
+        flex-direction: column;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__details {
+        color: $link-color;
+        font-size: 20px;
+        transition: 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+            color: $hover-color;
+        }
+
+        &:active {
+            transform: scale(1.1);
+            color: $hover-color;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        cursor: pointer;
+        border: none;
+        width: 25px;
+        height: 25px;
+        left: 93%;
+        top: 8px;
+
+        @include media ($md) {
+            width: 40px;
+            height: 40px;
+            left: 93%;
+            top: 15px;
+        }
+
+        @include media ($lg) {
+            width: 40px;
+            height: 40px;
+            left: 95%;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

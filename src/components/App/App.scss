@@ -1,0 +1,18 @@
+@import './SCSS/style.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+body {
+    background-image: url('../../../public/bg.jpg');
+    background-size: contain;
+    font-family: 'Marvel', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
